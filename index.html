@@ -1,45 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Johns Burgers - Sutherlin, OR</title>
+<title>John's Burgers - Sutherlin, OR</title>
 <style>
-:root { --brown: #6b3410; --cream: #fff7ea; --accent: #c2410c; }
-* { box-sizing: border-box; }
-body { margin: 0; font-family: Georgia, serif; background: var(--cream); color: var(--brown); line-height: 1.6; }
-header { text-align: center; padding: 3rem 1rem 2rem; background: var(--brown); color: var(--cream); }
-header img { max-width: 180px; height: auto; margin-bottom: 1rem; }
-header h1 { margin: 0 0 0.25rem; font-size: 2.5rem; letter-spacing: 0.05em; }
-header p { margin: 0; font-style: italic; opacity: 0.9; }
-main { max-width: 640px; margin: 0 auto; padding: 2rem 1.5rem; }
-section { margin-bottom: 2rem; }
-h2 { color: var(--accent); border-bottom: 2px solid var(--accent); padding-bottom: 0.25rem; }
-.info-row { display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px dashed #d4a574; }
-.info-row:last-child { border-bottom: none; }
-.label { font-weight: bold; }
-footer { text-align: center; padding: 1.5rem; font-size: 0.85rem; color: var(--brown); opacity: 0.7; }
+  body { font-family: Georgia, serif; max-width: 780px; margin: 2rem auto; padding: 0 1rem; color: #2b1d14; background: #fff8f0; line-height: 1.55; }
+  header { text-align: center; border-bottom: 2px solid #8b3a1f; padding-bottom: 1rem; margin-bottom: 1.5rem; }
+  header img { max-width: 220px; height: auto; }
+  h1 { margin: 0.5rem 0; color: #8b3a1f; }
+  h2 { color: #8b3a1f; border-bottom: 1px solid #e0c9a6; padding-bottom: 0.25rem; margin-top: 2rem; }
+  h3 { color: #6b2a14; margin-top: 1.25rem; margin-bottom: 0.25rem; }
+  .info { text-align: center; font-size: 1.05rem; margin-bottom: 1rem; }
+  .item { margin-bottom: 0.9rem; }
+  .item-name { font-weight: bold; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #e0c9a6; text-align: center; font-size: 0.9rem; color: #6b4a2a; }
 </style>
 </head>
 <body>
 <header>
-<img src="images/johns-burgers-logo.webp" alt="Johns Burgers logo">
-<h1>Johns Burgers</h1>
-<p>The most delectable burgers in Sutherlin</p>
+  <img src="images/johns-burgers-logo.webp" alt="John's Burgers logo">
+  <h1>John's Burgers</h1>
+  <div class="info">910 W Central Ave, Sutherlin, OR &middot; Mon-Fri 9-5</div>
 </header>
-<main>
-<section>
+
 <h2>About</h2>
-<p>We sell burgers that are just the most delectable. Come by and see what all the fuss is about.</p>
-</section>
-<section>
-<h2>Visit Us</h2>
-<div class="info-row"><span class="label">Address</span><span>910 W Central Ave, Sutherlin, OR</span></div>
-<div class="info-row"><span class="label">Hours</span><span>Mon-Fri, 9:00am - 5:00pm</span></div>
-</section>
-</main>
+<p>I've been doing this for twenty-five years. The whole family says I make the meanest burger they've ever had &mdash; come on by and see for yourself.</p>
+
+<h2>Menu</h2>
+
+<h3>Signature Burgers</h3>
+<div class="item"><span class="item-name">The Classic Heavyweight</span> &mdash; Double 1/4 lb beef patties, melted American cheese, crisp lettuce, tomato, sliced onions, and "Trap Sauce" on a toasted brioche bun.</div>
+<div class="item"><span class="item-name">Smokehouse BBQ Stack</span> &mdash; Single beef patty topped with applewood smoked bacon, sharp cheddar, crispy fried onion straws, and tangy BBQ sauce.</div>
+<div class="item"><span class="item-name">The Midnight Shift</span> &mdash; Beef patty, fried egg, hash brown, pepper jack cheese, and spicy aioli for that late-night energy boost.</div>
+<div class="item"><span class="item-name">Mushroom Swiss Melt</span> &mdash; Sauteed garlic mushrooms and melted Swiss cheese over a flame-grilled beef patty with truffle mayo.</div>
+<div class="item"><span class="item-name">The Green Glitch (Veggie)</span> &mdash; A seasoned plant-based patty with avocado, sprouts, pickled red onions, and chipotle ranch.</div>
+
+<h3>Sides &amp; Snacks</h3>
+<div class="item"><span class="item-name">Salty Dog Fries</span> &mdash; Hand-cut fries tossed in sea salt and cracked black pepper.</div>
+<div class="item"><span class="item-name">Loaded "Trash" Tots</span> &mdash; Tater tots smothered in beer cheese, bacon bits, jalapenos, and green onions.</div>
+<div class="item"><span class="item-name">Beer-Battered Rings</span> &mdash; Thick-cut onion rings served with a side of horseradish dipping sauce.</div>
+
+<h3>Shakes &amp; Drinks</h3>
+<div class="item"><span class="item-name">Oil Spill Shake</span> &mdash; Rich chocolate milkshake with crushed Oreo cookies and whipped cream.</div>
+<div class="item"><span class="item-name">Neon Citrus Soda</span> &mdash; A bright, fizzy lime and orange soda with a caffeine kick.</div>
+<div class="item"><span class="item-name">Bottomless Joe</span> &mdash; Black coffee, served in a ceramic mug that's definitely seen better days.</div>
+
+<h2>Visit</h2>
+<p>910 W Central Ave, Sutherlin, OR<br>Open Monday through Friday, 9am to 5pm.</p>
+
 <footer>
-&copy; Johns Burgers - Sutherlin, Oregon
+  Hosted by <a href="https://freesoftware.support">freesoftware.support</a>
 </footer>
 </body>
 </html>
