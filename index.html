@@ -1,1 +1,299 @@
-/tmp/johns-burgers-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>John's Burgers - Sutherlin, OR</title>
+<style>
+  body {
+    font-family: Georgia, serif;
+    max-width: 780px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    color: #0b1d4a;
+    background: linear-gradient(135deg, #fff8d6 0%, #e6f0ff 100%);
+    line-height: 1.55;
+    cursor: default;
+  }
+  header {
+    text-align: center;
+    border-bottom: 3px solid #d4a017;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  header img {
+    max-width: 220px;
+    height: auto;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+  }
+  header img:hover {
+    transform: rotate(-5deg) scale(1.05);
+  }
+  h1 {
+    margin: 0.5rem 0;
+    color: #1e3a8a;
+    background: linear-gradient(90deg, #d4a017, #1e3a8a, #d4a017);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 4s linear infinite;
+    font-size: 2.4rem;
+  }
+  @keyframes shimmer {
+    to { background-position: 200% center; }
+  }
+  h2 {
+    color: #1e3a8a;
+    border-bottom: 1px solid #d4a017;
+    padding-bottom: 0.25rem;
+    margin-top: 2rem;
+  }
+  h3 {
+    color: #b8860b;
+    margin-top: 1.25rem;
+    margin-bottom: 0.25rem;
+  }
+  .info {
+    text-align: center;
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+    color: #1e3a8a;
+  }
+  .item {
+    margin-bottom: 0.9rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .item:hover {
+    background: rgba(212, 160, 23, 0.12);
+    transform: translateX(4px);
+  }
+  .item-name {
+    font-weight: bold;
+    color: #1e3a8a;
+  }
+  .hint {
+    text-align: center;
+    font-style: italic;
+    color: #4a5a8a;
+    margin: 1.25rem auto;
+    padding: 0.6rem 0.8rem;
+    background: rgba(212, 160, 23, 0.08);
+    border-left: 3px solid #d4a017;
+    border-right: 3px solid #d4a017;
+    border-radius: 4px;
+    max-width: 560px;
+  }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #d4a017;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #4a5a8a;
+  }
+  footer a {
+    color: #1e3a8a;
+  }
+  .sparkle {
+    position: fixed;
+    pointer-events: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffd700 0%, #d4a017 40%, transparent 70%);
+    box-shadow: 0 0 8px #ffd700, 0 0 16px #4169e1;
+    animation: sparkle-fade 900ms ease-out forwards;
+    z-index: 9999;
+  }
+  @keyframes sparkle-fade {
+    0%   { opacity: 1; transform: scale(1) translate(0, 0); }
+    100% { opacity: 0; transform: scale(0.2) translate(var(--dx), var(--dy)); }
+  }
+  .burger-rain {
+    position: fixed;
+    top: -40px;
+    font-size: 2rem;
+    pointer-events: none;
+    z-index: 9998;
+    animation: fall linear forwards;
+  }
+  @keyframes fall {
+    to { transform: translateY(110vh) rotate(720deg); }
+  }
+  #egg-toast {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%) translateY(120%);
+    background: linear-gradient(90deg, #1e3a8a, #d4a017);
+    color: #fff8d6;
+    padding: 0.8rem 1.4rem;
+    border-radius: 8px;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgba(30, 58, 138, 0.4);
+    z-index: 10000;
+    transition: transform 0.4s ease;
+    text-align: center;
+    max-width: 90vw;
+  }
+  #egg-toast.show {
+    transform: translateX(-50%) translateY(0);
+  }
+  #egg-toast .code {
+    display: inline-block;
+    background: #fff8d6;
+    color: #1e3a8a;
+    padding: 0.1rem 0.5rem;
+    margin: 0 0.2rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+  }
+</style>
+</head>
+<body>
+<header>
+  <img src="images/johns-burgers-logo.webp" alt="John's Burgers logo" id="logo" title="psst... try clicking me a few times">
+  <h1>John's Burgers</h1>
+  <div class="info">910 W Central Ave, Sutherlin, OR &middot; Mon-Fri 9-5</div>
+</header>
+
+<h2>About</h2>
+<p>I've been doing this for twenty-five years. The whole family says I make the meanest burger they've ever had &mdash; come on by and see for yourself.</p>
+
+<div class="hint">Pssst &mdash; we've hidden a few little surprises around this page. Try poking at things, typing a tasty word, or pulling out an old-school keyboard trick. Find one and a secret code will pop up at the bottom of the screen. Show it at the counter for 10 off your order.</div>
+
+<h2>Menu</h2>
+
+<h3>Signature Burgers</h3>
+<div class="item"><span class="item-name">The Classic Heavyweight</span> &mdash; Double 1/4 lb beef patties, melted American cheese, crisp lettuce, tomato, sliced onions, and "Trap Sauce" on a toasted brioche bun.</div>
+<div class="item"><span class="item-name">Smokehouse BBQ Stack</span> &mdash; Single beef patty topped with applewood smoked bacon, sharp cheddar, crispy fried onion straws, and tangy BBQ sauce.</div>
+<div class="item"><span class="item-name">The Midnight Shift</span> &mdash; Beef patty, fried egg, hash brown, pepper jack cheese, and spicy aioli for that late-night energy boost.</div>
+<div class="item"><span class="item-name">Mushroom Swiss Melt</span> &mdash; Sauteed garlic mushrooms and melted Swiss cheese over a flame-grilled beef patty with truffle mayo.</div>
+<div class="item"><span class="item-name">The Green Glitch (Veggie)</span> &mdash; A seasoned plant-based patty with avocado, sprouts, pickled red onions, and chipotle ranch.</div>
+
+<h3>Sides &amp; Snacks</h3>
+<div class="item"><span class="item-name">Salty Dog Fries</span> &mdash; Hand-cut fries tossed in sea salt and cracked black pepper.</div>
+<div class="item"><span class="item-name">Loaded "Trash" Tots</span> &mdash; Tater tots smothered in beer cheese, bacon bits, jalapenos, and green onions.</div>
+<div class="item"><span class="item-name">Beer-Battered Rings</span> &mdash; Thick-cut onion rings served with a side of horseradish dipping sauce.</div>
+
+<h3>Shakes &amp; Drinks</h3>
+<div class="item"><span class="item-name">Oil Spill Shake</span> &mdash; Rich chocolate milkshake with crushed Oreo cookies and whipped cream.</div>
+<div class="item"><span class="item-name">Neon Citrus Soda</span> &mdash; A bright, fizzy lime and orange soda with a caffeine kick.</div>
+<div class="item"><span class="item-name">Bottomless Joe</span> &mdash; Black coffee, served in a ceramic mug that's definitely seen better days.</div>
+
+<h2>Visit</h2>
+<p>910 W Central Ave, Sutherlin, OR<br>Open Monday through Friday, 9am to 5pm.</p>
+
+<footer>
+  Hosted by <a href="https://freesoftware.support">freesoftware.support</a>
+</footer>
+
+<div id="egg-toast"></div>
+
+<script>
+(function () {
+  var COUPON = 'FOUNDIT2026';
+
+  var lastSpawn = 0;
+  document.addEventListener('mousemove', function (e) {
+    var now = Date.now();
+    if (now - lastSpawn < 25) return;
+    lastSpawn = now;
+    spawnSparkle(e.clientX, e.clientY);
+  });
+  document.addEventListener('touchmove', function (e) {
+    if (!e.touches.length) return;
+    var t = e.touches[0];
+    spawnSparkle(t.clientX, t.clientY);
+  }, { passive: true });
+
+  function spawnSparkle(x, y) {
+    var s = document.createElement('div');
+    s.className = 'sparkle';
+    s.style.left = (x - 5) + 'px';
+    s.style.top = (y - 5) + 'px';
+    var dx = (Math.random() * 40 - 20) + 'px';
+    var dy = (Math.random() * 40 - 20) + 'px';
+    s.style.setProperty('--dx', dx);
+    s.style.setProperty('--dy', dy);
+    document.body.appendChild(s);
+    setTimeout(function () { s.remove(); }, 900);
+  }
+
+  var konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+  var pos = 0;
+  document.addEventListener('keydown', function (e) {
+    if (e.keyCode === konami[pos]) {
+      pos++;
+      if (pos === konami.length) {
+        pos = 0;
+        burgerRain();
+        showCouponToast('Secret menu unlocked!');
+      }
+    } else {
+      pos = 0;
+    }
+  });
+
+  function burgerRain() {
+    var symbols = ['\u{1F354}', '\u{1F35F}', '\u{1F964}', '\u{2B50}', '\u{2728}'];
+    for (var i = 0; i < 40; i++) {
+      (function (i) {
+        setTimeout(function () {
+          var b = document.createElement('div');
+          b.className = 'burger-rain';
+          b.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+          b.style.left = Math.random() * 100 + 'vw';
+          b.style.animationDuration = (3 + Math.random() * 3) + 's';
+          document.body.appendChild(b);
+          setTimeout(function () { b.remove(); }, 7000);
+        }, i * 80);
+      })(i);
+    }
+  }
+
+  var clicks = 0;
+  var clickTimer = null;
+  var logo = document.getElementById('logo');
+  if (logo) {
+    logo.addEventListener('click', function () {
+      clicks++;
+      clearTimeout(clickTimer);
+      clickTimer = setTimeout(function () { clicks = 0; }, 2000);
+      if (clicks >= 5) {
+        clicks = 0;
+        burgerRain();
+        showCouponToast('John says: thanks for visiting!');
+      }
+    });
+  }
+
+  var typed = '';
+  document.addEventListener('keydown', function (e) {
+    if (e.key && e.key.length === 1) {
+      typed = (typed + e.key.toLowerCase()).slice(-6);
+      if (typed === 'burger') {
+        typed = '';
+        burgerRain();
+        showCouponToast('You found the secret word!');
+      }
+    }
+  });
+
+  function showCouponToast(prefix) {
+    var t = document.getElementById('egg-toast');
+    if (!t) return;
+    t.innerHTML = prefix + '<br>Show this at the counter for 10 off: <span class="code">' + COUPON + '</span>';
+    t.classList.add('show');
+    setTimeout(function () { t.classList.remove('show'); }, 4500);
+  }
+})();
+</script>
+</body>
+</html>
